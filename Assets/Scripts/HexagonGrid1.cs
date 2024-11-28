@@ -10,6 +10,8 @@ public class CellGrid : MonoBehaviour
     public float ySpacing = 0.87f;
     public Transform map;
     public ParticleSystem frogPS;
+    public AudioSource frogSound;
+
 
     private List<Color> cellColors = new List<Color>
     {
@@ -219,7 +221,8 @@ public class CellGrid : MonoBehaviour
     // Frog üzerine tıklama işlemi
     void OnMouseDown(GameObject frog)
     {
-        // Büyütme ve küçültme animasyonu
+        frogSound.Play();
+
         Sequence scaleSequence = DOTween.Sequence();
         scaleSequence.Append(frog.transform.DOScale(1.5f, 0.2f)) // Biraz büyüt
         .Append(frog.transform.DOScale(1.0f, 0.2f)); // Eski haline getir
