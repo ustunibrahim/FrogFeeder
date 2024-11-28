@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\elementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\assets\\scripts\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\assets\\scripts\\taghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\assets\\scripts\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8648B229-4279-4863-31AB-D21232F5CCFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,13 +40,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ElementManager.cs",
               "ToolTip": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\ElementManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ElementManager.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAcwCQAAABcAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T12:16:02.99Z"
+              "WhenOpened": "2024-11-28T12:16:02.99Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "GridManager.cs",
               "DocumentMoniker": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\GridManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GridManager.cs",
@@ -64,26 +65,26 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionManager.cs",
               "ToolTip": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\InteractionManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\InteractionManager.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwEcAAAAAAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAAI8AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T12:15:35.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TagHelper.cs",
               "DocumentMoniker": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\TagHelper.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TagHelper.cs",
               "ToolTip": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\TagHelper.cs",
               "RelativeToolTip": "Assets\\Scripts\\TagHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T12:15:23.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainController.cs",
               "DocumentMoniker": "C:\\Users\\ustun\\Documents\\UnityProjeler\\FrogFoodOrder\\Assets\\Scripts\\MainController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MainController.cs",

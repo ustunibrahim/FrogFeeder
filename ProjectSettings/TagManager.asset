@@ -9,6 +9,7 @@ TagManager:
   - Purple
   - Yellow
   - Red
+  - Map
   layers:
   - Default
   - TransparentFX
