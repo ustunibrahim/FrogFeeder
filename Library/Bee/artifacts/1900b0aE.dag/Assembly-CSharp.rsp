@@ -362,6 +362,7 @@
 "Assets/Scripts/GridManager.cs"
 "Assets/Scripts/InteractionManager.cs"
 "Assets/Scripts/MainController.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/TagHelper.cs"
 -langversion:9.0
 /deterministic

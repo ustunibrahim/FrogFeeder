@@ -7,6 +7,7 @@ public class GridManager : MonoBehaviour
     public Transform map;
     public float xSpacing = 1.0f;
     public float ySpacing = 0.87f;
+    public Camera Camera;
 
     private List<Color> cellColors = new List<Color>
     {
@@ -31,6 +32,13 @@ public class GridManager : MonoBehaviour
 
                 TagHelper.AssignColorAndTag(cell, cellColor);
             }
+        }
+
+        if (rows == 3) { 
+            Camera.transform.position = new Vector3(1, 1.6f, -10);
+        }else if (rows == 4)
+        {
+            Camera.transform.position = new Vector3(1.5f, 2, -10);
         }
     }
 }

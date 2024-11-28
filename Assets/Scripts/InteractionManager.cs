@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
-using UnityEngine.SceneManagement; // Yeni sahneye geçiş için gerekli
+
 
 public class InteractionManager : MonoBehaviour
 {
@@ -10,19 +10,17 @@ public class InteractionManager : MonoBehaviour
     public AudioSource frogSound;
     public ParticleSystem frogPS;
     public GameObject tonguePrefab;
-    public Transform map; // Frog ve grape'lerin bulunduğu parent obje
+    public Transform map; 
     public int move;
+    
 
-    private void Start()
-    {
-        moveText.text = move + " MOVES";
-    }
+    
 
     public void HandleFrogClick(GameObject frog)
     {
         if (move > 0)
         {
-            // Frog animasyonunu ve sesi çalıştır
+            
             frogSound.Play();
             Sequence scaleSequence = DOTween.Sequence();
             scaleSequence.Append(frog.transform.DOScale(1.5f, 0.2f))
@@ -31,12 +29,14 @@ public class InteractionManager : MonoBehaviour
             scaleSequence.OnComplete(() => StartCoroutine(ActivateTongue(frog)));
 
             move--;
+            moveText.text = move + " MOVES";
 
             if (move <= 3 && move !=0)
             {
                 moveText.color = Color.red; 
                 moveText.text = move + " MOVES";
-            }else if (move == 0)
+            }
+            else if (move == 0)
             {
                 moveText.text = "";
             }
@@ -115,7 +115,7 @@ public class InteractionManager : MonoBehaviour
         frogPS.Play();
         yield return new WaitForSeconds(0.5f);
 
-        // Kontrol: Frog'lar bitmiş mi?
+        
         CheckGameState();
     }
 
@@ -127,10 +127,11 @@ public class InteractionManager : MonoBehaviour
         foreach (Transform child in map)
         {
                
-            if (child.gameObject.name=="Frog(Clone)") // Frog tag'li objeleri sayar
+            if (child.gameObject.name=="Frog(Clone)") 
             {
-                //print("131"+ child.gameObject);
+                
                 remainingFrogs++;
+                
             }
         }
 
@@ -139,9 +140,8 @@ public class InteractionManager : MonoBehaviour
             if (remainingFrogs == 0)
             {
                 moveText.text = "LEVEL COMPLETED";
-
-                // Frog kalmadı ve hareket hakkı >= 0, yeni sahneye geç
-                StartCoroutine(LoadNextSceneAfterDelay());
+                
+               
             }
         }
         else if (move == 0)
@@ -149,22 +149,17 @@ public class InteractionManager : MonoBehaviour
             if (remainingFrogs == 0) 
             {
                 moveText.text = "LEVEL COMPLETED";
-                StartCoroutine(LoadNextSceneAfterDelay());
-
+               
             }
 
         }
         else
         {
-            // Frog var ama hareket hakkı yok
+           
             moveText.text = "GAME OVER";
             moveText.color = Color.red;
         }
     }
 
-    private IEnumerator LoadNextSceneAfterDelay()
-    {
-        yield return new WaitForSeconds(5.5f); // 5 saniye bekle
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Sonraki sahneyi yükle
-    }
+  
 }

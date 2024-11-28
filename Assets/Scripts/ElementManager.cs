@@ -32,14 +32,14 @@ public class ElementManager : MonoBehaviour
                 float xPos = col * xSpacing;
                 float yPos = row * ySpacing;
 
-                if (row == 0) // İlk sıra: Frog'lar
+                if (row == 0) 
                 {
                     GameObject frog = Instantiate(frogPrefab, new Vector3(xPos, yPos, 0), Quaternion.identity, map);
                     frog.transform.rotation = Quaternion.Euler(90, 180, 0);
 
                     AssignTagAndMaterial(frog, xPos, yPos, "Frog");
                 }
-                else // Diğer sıralar: Grape'ler
+                else 
                 {
                     GameObject grape = Instantiate(grapePrefab, new Vector3(xPos, yPos, -0.2f), Quaternion.identity, map);
                     AssignTagAndMaterial(grape, xPos, yPos, "Grape");
@@ -50,7 +50,7 @@ public class ElementManager : MonoBehaviour
 
     private void LoadMaterials()
     {
-        // Resources/Materials/FrogMaterials ve GrapeMaterials klasörlerinden materyalleri yükle
+        
         Material[] loadedFrogMaterials = Resources.LoadAll<Material>("Materials/FrogMaterials");
         foreach (Material mat in loadedFrogMaterials)
         {
@@ -73,7 +73,7 @@ public class ElementManager : MonoBehaviour
         {
             element.tag = cellTag;
 
-            // Materyal ataması
+            
             Material material = null;
             Material[] loadedFrogMaterials = Resources.LoadAll<Material>("Materials/FrogMaterials");
             Material[] loadedGrapeMaterials = Resources.LoadAll<Material>("Materials/GrapeMaterials");

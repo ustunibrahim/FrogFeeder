@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MainController : MonoBehaviour
@@ -5,11 +6,18 @@ public class MainController : MonoBehaviour
     public GridManager gridManager;
     public ElementManager elementManager;
     public InteractionManager interactionManager;
+    public int x,y;
+    public MainMenu menu;
+
+    internal void RestartLevel(int x, int y)
+    {
+        gridManager.CreateCellGrid(x, y);
+        elementManager.CreateElements(x,y);
+    }
 
     void Start()
     {
-        gridManager.CreateCellGrid(5, 5);
-        elementManager.CreateElements(5, 5);
+        menu.RestartMainMenu();
     }
 
     void Update()
