@@ -256,8 +256,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864692229}
-  - component: {fileID: 864692228}
+  - component: {fileID: 864692233}
+  - component: {fileID: 864692232}
+  - component: {fileID: 864692231}
   - component: {fileID: 864692230}
+  - component: {fileID: 864692234}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -265,27 +268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &864692228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864692227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 251aa8e21328c434d922e52fa34247af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cellPrefab: {fileID: 7139882941468145924, guid: 45a634f5fe9bb784aaa010dc55d62fc4, type: 3}
-  frogPrefab: {fileID: 2499981957079714562, guid: ff864a7217ad2784387ea33e87aeace9, type: 3}
-  grapePrefab: {fileID: 2984640481989566875, guid: 16369626e4e0ccb4693aa692e6d044fa, type: 3}
-  TonguePrefab: {fileID: 3235544168760816738, guid: 5064dd03175207b498d1945d13f9b39b, type: 3}
-  xSpacing: 1
-  ySpacing: 1
-  map: {fileID: 162627021}
-  frogPS: {fileID: 1889936886}
-  frogSound: {fileID: 864692230}
 --- !u!4 &864692229
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +283,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &864692230
+--- !u!114 &864692230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864692227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b409c930d03dd149bc183ed185be233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 864692232}
+  elementManager: {fileID: 864692233}
+  interactionManager: {fileID: 864692231}
+--- !u!114 &864692231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864692227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076552aba982f10438788e507bb1969e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogSound: {fileID: 864692234}
+  frogPS: {fileID: 1889936886}
+  tonguePrefab: {fileID: 3235544168760816738, guid: 5064dd03175207b498d1945d13f9b39b, type: 3}
+  map: {fileID: 162627021}
+--- !u!114 &864692232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864692227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0612233c3adb994382506407c4239d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellPrefab: {fileID: 7139882941468145924, guid: 45a634f5fe9bb784aaa010dc55d62fc4, type: 3}
+  map: {fileID: 162627021}
+  xSpacing: 1
+  ySpacing: 0.87
+--- !u!114 &864692233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864692227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e6730322ae17e48a04897a299c4bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogPrefab: {fileID: 2499981957079714562, guid: ff864a7217ad2784387ea33e87aeace9, type: 3}
+  grapePrefab: {fileID: 2984640481989566875, guid: 16369626e4e0ccb4693aa692e6d044fa, type: 3}
+  map: {fileID: 162627021}
+  xSpacing: 1
+  ySpacing: 0.87
+--- !u!82 &864692234
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,7 +359,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e8248e88167be745b3095fe4588d529, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.165
+  m_Volume: 0.043
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -870,7 +916,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1570,9 +1616,9 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 10
-      minScalar: 10
+      minMaxState: 3
+      scalar: 100
+      minScalar: 50
       maxCurve:
         serializedVersion: 2
         m_Curve:
